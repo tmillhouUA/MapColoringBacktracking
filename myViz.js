@@ -6,7 +6,7 @@ let sideSquares = 5
 let sideLength = 100
 let fps = 30
 let squareSize = sideLength/sideSquares
-let varOrdering = 'degree' // 'none' | 'degree' | 'mrv'
+let varOrdering = 'none' // 'none' | 'degree' | 'mrv'
 let filtering = 'none' // 'none' | 'fc' | 'ac3'
 
 //Prepare Data

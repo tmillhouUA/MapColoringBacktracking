@@ -59,6 +59,3 @@ All dependencies are bundled locally in the `d3/` folder - no internet connectio
 | Library | Version |
 |---|---|
 | D3 | v4 |
-| d3-scale-chromatic | v1 |
-| d3-contour | v1 |
-| d3-3d | - |

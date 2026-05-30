@@ -4,23 +4,23 @@ An interactive, browser-based visualization of backtracking search for the US ma
 
 ## Algorithm
 
-The visualization implements **depth-first backtracking search** with configurable variable ordering and constraint filtering heuristics. The search explores partial assignments, detects constraint violations, and backtracks when no legal color exists for a variable.
+The visualization implements **depth-first backtracking search** with configurable variable ordering heuristics and inference methods. The search explores partial assignments, detects constraint violations, and backtracks when no legal color exists for a variable.
 
 ## Variable Ordering
 
 | Option | Description |
 |---|---|
 | None | States assigned in default order |
-| Degree | States with the most neighbors attempted first |
-| Min Remaining Vals (MRV) | Dynamically selects the most constrained unassigned state at each step; starts from Arizona |
+| Deg | Pick states in order of most neighbors to fewest |
+| MRV | Pick state with fewest legal colors next |
 
-## Filtering
+## Inference
 
 | Option | Description |
 |---|---|
-| None | Constraints checked only against already-assigned neighbors |
-| Forward Checking (FC) | After each assignment, prunes the color from all unassigned neighbors' domains; rejects the node immediately if any neighbor's domain becomes empty |
-| AC-3 | Extends forward checking with full arc consistency propagation across the constraint graph after each assignment |
+| None | No inference about unassigned neighbors |
+| FC | Forward Checking - prune assigned color from unassigned neighbors immediately |
+| MAC | Maintaining Arc Consistency - run localized AC-3 after each assignment |
 
 ## Controls
 
@@ -29,7 +29,7 @@ The visualization implements **depth-first backtracking search** with configurab
 | Play / Pause | Start or pause the animation |
 | Step | Advance one complete assignment (plays the full highlight animation then stops) |
 | Reset | Clear the map and restart with current settings |
-| Speed slider | Adjust playback speed from 1–120 fps |
+| Speed slider | Adjust playback speed from 1-120 fps |
 
 ## Display
 
@@ -54,11 +54,11 @@ Alternatively, clone or download the repository and open `index.html` directly i
 
 ## Dependencies
 
-All dependencies are bundled locally in the `d3/` folder — no internet connection required.
+All dependencies are bundled locally in the `d3/` folder - no internet connection required.
 
 | Library | Version |
 |---|---|
 | D3 | v4 |
 | d3-scale-chromatic | v1 |
 | d3-contour | v1 |
-| d3-3d | — |
+| d3-3d | - |

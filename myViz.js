@@ -156,7 +156,7 @@ function makeStatRow(y, label){
 
 const statY0 = panelY + panelPad + 13
 const lineH = 38
-let statCurrent      = makeStatRow(statY0,           "Current Variable")
+let statCurrent      = makeStatRow(statY0,           "Current Variable").text("-")
 let statAssigned     = makeStatRow(statY0 + lineH,   "Assigned")
 let statNodes        = makeStatRow(statY0 + lineH*2, "Nodes Explored")
 let statBacktracks   = makeStatRow(statY0 + lineH*3, "Backtracks")
@@ -172,7 +172,7 @@ let maxFrontier = 0
 function updateStats(assignment, currentVar){
     if(frontier.length > maxFrontier) maxFrontier = frontier.length
     let assignedCount = Object.keys(assignment).length
-    statCurrent.text(currentVar || "—")
+    statCurrent.text(currentVar || "-")
     statAssigned.text(assignedCount + " / " + states.length)
     statNodes.text(nodesExplored)
     statBacktracks.text(backtracks)

@@ -99,27 +99,26 @@
       </div>
       <div class="tb-section">
         <span style="color:#aaa; font-size:13px;">Variable Order:</span>
-        <label style="display:flex; align-items:center; gap:4px; cursor:pointer; color:#ccc; font-size:13px;">
+        <label title="None — states assigned in default order" style="display:flex; align-items:center; gap:4px; cursor:pointer; color:#ccc; font-size:13px;">
           <input type="radio" name="varOrder" value="none"> None
         </label>
-        <label style="display:flex; align-items:center; gap:4px; cursor:pointer; color:#ccc; font-size:13px;">
-          <input type="radio" name="varOrder" value="degree" checked> Degree
+        <label title="Degree heuristic — pick states in order of most neighbors to fewest" style="display:flex; align-items:center; gap:4px; cursor:pointer; color:#ccc; font-size:13px;">
+          <input type="radio" name="varOrder" value="degree" checked> Deg
         </label>
-        <label style="display:flex; align-items:center; gap:4px; cursor:pointer; color:#ccc; font-size:13px;">
-          <input type="radio" name="varOrder" value="mrv"> Min Remaining Vals
+        <label title="Minimum Remaining Values — pick state with fewest legal colors next" style="display:flex; align-items:center; gap:4px; cursor:pointer; color:#ccc; font-size:13px;">
+          <input type="radio" name="varOrder" value="mrv"> MRV
         </label>
       </div>
       <div class="tb-section">
-        <span style="color:#aaa; font-size:13px;">Filtering:</span>
-        <label style="display:flex; align-items:center; gap:4px; cursor:pointer; color:#ccc; font-size:13px;">
+        <span style="color:#aaa; font-size:13px;">Inference:</span>
+        <label title="None - no inference about unassigned neighbors" style="display:flex; align-items:center; gap:4px; cursor:pointer; color:#ccc; font-size:13px;">
           <input type="radio" name="filtering" value="none" checked> None
         </label>
-        <label style="display:flex; align-items:center; gap:4px; cursor:pointer; color:#ccc; font-size:13px;">
-          <input type="radio" name="filtering" value="fc"> Forward Checking
+        <label title="Forward Checking — prune assigned color from unassigned neighbors immediately" style="display:flex; align-items:center; gap:4px; cursor:pointer; color:#ccc; font-size:13px;">
+          <input type="radio" name="filtering" value="fc"> FC
         </label>
-        <label style="display:flex; align-items:center; gap:4px; cursor:pointer; color:#ccc; font-size:13px;">
-          <input type="radio" name="filtering" value="ac3"> AC-3
-        </label>
+        <label title="Maintaining Arc Consistency — run localized AC-3 after each assignment" style="display:flex; align-items:center; gap:4px; cursor:pointer; color:#ccc; font-size:13px;">
+          <input type="radio" name="filtering" value="ac3"> MAC
       </div>
     </div>
     <div id="viz">

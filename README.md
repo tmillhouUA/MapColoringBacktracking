@@ -1,6 +1,6 @@
 # Map Coloring w/ Backtracking
 
-An interactive, browser-based visualization of backtracking search for the US map 4-coloring CSP (Constraint Satisfaction Problem) built with D3.js. Animates how the algorithm assigns colors to all 50 US states and DC while satisfying the constraint that no two adjacent states share a color.
+An interactive, browser-based visualization of backtracking search for the US map coloring CSP (Constraint Satisfaction Problem) built with D3.js. Animates how the algorithm assigns colors to all 50 US states and DC while satisfying the constraint that no two adjacent states share a color.
 
 ## Algorithm
 
